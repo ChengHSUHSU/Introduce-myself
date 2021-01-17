@@ -2,38 +2,17 @@
 <html>
 <head>
 <meta charset="UTF-8" />
-<title>AJAX 網路連線基本操作</title>
+<title>Introduce Myself</title>
 </head>
 <body>
-	<h1>AJAX 網路連線基本操作</h1>
-	<div id="list"></div>
-	<script>
-		// 先顯示載入中的訊息
-		let list=document.getElementById("list");
-		list.innerHTML="... Loading ...";
-		/*
-			基本的 AJAX 語法：使用最新的 fetch 內建函式
-				fetch(網址).then(function(response){
-					// 取得 response 物件
-				});
-			詳細使用請參考：
-				https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
-			或搜尋關鍵字：
-				fetch mdn
-		*/
-		// 透過網址取得伺服器端提供的 JSON 格式資料
-		fetch("https://cwpeng.github.io/live-records-samples/data/products.json").then(function(response){
-			return response.json();
-		}).then(function(data){
-			// 先清空畫面
-			list.innerHTML="";
-			// 根據取得的資料，將產品的訊息顯示出來
-			let product;
-			for(let i=0;i<data.length;i++){
-				product=data[i];
-				list.innerHTML+=product.name.bold()+" - "+product.price+"<br/>"+product.description+"<hr/>";
-			}
-		});
-	</script>
+	<h3> 申請人 </h3>
+	<h3> 兩百字內的個人簡介 </h3>
+	<h3> 為什麼想成為工程師 ( 請以自我期許帶入：前端、後端、或全端工程師 ) </h3>
+	<h3> 為了成為工程師，曾經做過什麼努力？ </h3>
+	<h3> 對於工程師的職業想像是什麼？ </h3>
+	<h3> 如果參與這個計畫，會怎麼安排學習時間？ </h3>
+	<h3> 如果參與這個計畫，預期會碰到什麼困難？你打算怎麼解決它？ </h3>
+	<h3> 想要對我們說的事情？ </h3>
+
 </body>
 </html>
